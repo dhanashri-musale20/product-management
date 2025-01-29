@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Product Management Tool</h1>
+
+    <div class="controls">
+        <button id="showProducts">Show Products</button>
+        <input type="text" id="searchBar" placeholder="Search by category">
+    </div>
+
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Products will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <div id="results">
+        <p>Total Stock: <span id="totalStock">0</span></p>
+        <p>Average Price: <span id="averagePrice">0</span></p>
+        <p>Highest Priced Product: <span id="highestProduct">N/A</span></p>
+    </div>
+
+    <form id="addProductForm">
+        <h3>Add New Product</h3>
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <input type="number" id="productPrice" placeholder="Price" required>
+        <input type="number" id="productStock" placeholder="Stock" required>
+        <input type="text" id="productCategory" placeholder="Category" required>
+        <button type="submit">Add Product</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
