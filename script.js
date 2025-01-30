@@ -26,7 +26,7 @@ function displayProducts(filter = '') {
        const row = document.createElement('tr');
        row.innerHTML = `
            <td>${product.name}</td>
-           <td>$${product.price}</td>
+           <td>₹${product.price}</td>
            <td>${product.stock}</td>
            <td>${product.category}</td>
        `;
@@ -42,7 +42,7 @@ function calculateStats(productsArray) {
    const highestProduct = productsArray.reduce((max, product) => product.price > max.price ? product : max, productsArray[0] || {});
 
    totalStockElement.textContent = totalStock;
-   averagePriceElement.textContent = `$${averagePrice.toFixed(2)}`;
+   averagePriceElement.textContent = `₹${averagePrice.toFixed(2)}`;
    highestProductElement.textContent = `${highestProduct.name || 'N/A'} (${highestProduct.category || 'N/A'})`;
 }
 
